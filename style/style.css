@@ -1,0 +1,39 @@
+body {
+    background-image: url(images/midnight-bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+#game-intro {
+    background-image: url(../images/midnight-bg.png);
+    background-size: cover;
+    padding: 20px 0px;
+}
+
+#game-container {
+    display: none;
+    width: 100%;
+    padding: 0;
+    justify-content: space-around;
+    background-image: url(../project-1-star-chaser/images/midnight-bg.png);
+    background-size: cover;
+}
+
+#game-screen {
+    display: none;
+    align-content: center;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    background-image: url(../images/midnight-bg.png);
+    background-size: cover;
+    
+}
+
+#game-end {
+    display: none;
+  }

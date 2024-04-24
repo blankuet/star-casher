@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Star Chaser</title>
+</head>
+<body>
+    <main>
+        <!-- Game intro-->
+        <div id="game-intro">
+            <a href=""><img src="https://fontmeme.com/permalink/240424/18c9258735a735ab1fead9e4af3d3b06.png" alt="pixel-fonts"></a>
+            <button id="start-button">Start Game</button>
+            <button id="music-button">Music on or off</button>
+            <p>Use your mouse to move and click to jump and catch stars... Careful! Avoid satellites</p>
+        </div>
+        
+        <div id="game-container">
+            <div>
+                <h2>Stats</h2>
+                <p>Score: <span id="score">0</span></p>
+                <p>Time:<span id="time">0</span></p>
+            </div>
+            <!-- #game-screen is initially hidden using CSS style display: none -->
+            <div id="game-screen"></div>
+        </div>
+            <!-- #game-end is initially hidden using CSS style display: none -->
+            <div id="game-end">
+                <img src="images/midnight-bg.png" alt="" class="background-img">
+                <h1>Game Over</h1>
+                <br />
+                <button id="restart-button">Play again</button>
+            </div>
+    </main>
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/obstacle.js"></script>
+    
+</body>
+</html>
