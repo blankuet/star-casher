@@ -1,17 +1,17 @@
 body {
-    background-image: url(images/midnight-bg.png);
+    background-image: url(../images/midnight-bg.png);
     background-size: cover;
     background-attachment: fixed;
     padding: 0px;
     position: relative;
     text-align: center;
     overflow: hidden;
+    height: 100vh;
 }
 
 #game-intro {
-    background-image: url(../images/midnight-bg.png);
-    background-size: cover;
     padding: 20px 0px;
+    height: 100vh;
 }
 
 #game-container {
@@ -19,8 +19,6 @@ body {
     width: 100%;
     padding: 0;
     justify-content: space-around;
-    background-image: url(../project-1-star-chaser/images/midnight-bg.png);
-    background-size: cover;
 }
 
 #game-screen {
