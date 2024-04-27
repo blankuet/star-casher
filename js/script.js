@@ -4,16 +4,12 @@ window.onload = function (){
 
     let game;
 
-    startButton.addEventListener("click", function() {
-        startGame();
-    });
-
-    function startGame(){
+    startButton.addEventListener("click", () => {
         game = new Game();
         game.start();
-    }
+    });
 
-    musicButton.addEventListener("click", function() {
+    musicButton.addEventListener("click", () => {
         musicButton.textContent = "Music off 🔇";
         //PENDING HOW TO CHANGE IT BACK TO 
     });

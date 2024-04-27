@@ -1,10 +1,9 @@
 body {
-    width: 100vh;
-    height: 100vh;
-    background-image: 
-    url(../images/midnight-bg.png);
-    background-size: cover;
-    padding: 0px;
+    background-image: url(../images/midnight-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 93%;
+    min-height: 100vh;
+    padding: 20px;
     position: relative;
     text-align: center;
     overflow: hidden;
@@ -12,10 +11,12 @@ body {
 }
 
 #game-intro {
-    width: 100vh;
-    height: 100vh;
+    width: 500px;
+    height: 600px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 20px 480px;
 }
 
 #start-button {
@@ -120,8 +121,8 @@ align-items: center;
 #game-container {
     display: none;
     width: 100%;
-    padding: 0;
-    justify-content: space-around;
+    padding: 0px;
+    color: white;
 }
 
 #game-screen {
