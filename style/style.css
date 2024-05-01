@@ -1,9 +1,9 @@
 body {
     background-image: url(../images/midnight-bg.png);
+    display: block;
     background-repeat: no-repeat;
-    background-size: 100% 93%;
-    min-height: 100vh;
-    padding: 20px;
+    background-size: 100% 100vh;
+    padding: 0px;
     position: relative;
     text-align: center;
     overflow: hidden;
@@ -16,7 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 480px;
+    padding: 200px 1200px;
 }
 
 #start-button {
@@ -64,6 +64,7 @@ align-items: center;
   box-shadow: #3c4fe0 0 3px 7px inset;
   transform: translateY(2px);
 }
+
 
 #music-button {
     align-items: center;
@@ -121,7 +122,7 @@ align-items: center;
 #game-container {
     display: none;
     width: 100%;
-    padding: 0px;
+    padding: 100px;
     color: white;
 }
 
@@ -131,7 +132,7 @@ align-items: center;
     padding: 0;
     overflow: hidden;
     position: relative;
-    background-image: url(../images/midnight-bg.png);
+    border: 2px solid red;
     background-size: cover;
     
 }

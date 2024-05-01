@@ -9,8 +9,17 @@ window.onload = function (){
         game.start();
     });
 
-    musicButton.addEventListener("click", () => {
-        musicButton.textContent = "Music off 🔇";
-        //PENDING HOW TO CHANGE IT BACK TO 
+    musicButton.addEventListener("click", function() {
+        let text = this.innerText;
+        this.innerText = text === 'Music on 🎶' ? 'Music off 🔇' : 'Music on 🎶';
     });
+
+    const speed = 10;
+
+    document.querySelector('#game-screen').addEventListener('mousemove', (e) => {
+        game.player.positionX = e.clientX;
+        console.log(e);
+        console.log(player);
+    }, false)
+
 }

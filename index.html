@@ -14,9 +14,8 @@
             <button id="start-button" role="button">Start Game ⭐</button>
             <button id="music-button" role="button">Music on 🎶</button>
             <p id="instructions">Use your mouse to move and click to jump and catch stars... Careful! Avoid satellites</p>
-
         </div>
-        
+        <!-- #game-screen is initially hidden using CSS style display: none -->
         <div id="game-container">
             <div>
                 <h2>Stats</h2>
@@ -25,16 +24,15 @@
                     </p>
                 <p>Lives: <span id="lives">3</span></p>
                 <p>Score: <span id="score">0</span></p>
-            <!-- #game-screen is initially hidden using CSS style display: none -->
-            <div id="game-screen"></div>
-        </div>
-            <!-- #game-end is initially hidden using CSS style display: none -->
-            <div id="game-end">
-                <img src="images/midnight-bg.png" alt="" class="background-img">
-                <h1>Game Over</h1>
-                <br />
-                <button id="restart-button">Play again</button>
+                
             </div>
+            <div id="game-screen"></div>
+        <!-- #game-end is initially hidden using CSS style display: none -->
+        <div id="game-end">
+            <h1>Game Over</h1>
+            <br />
+            <button id="restart-button">Play again</button>
+        </div>
     </main>
     <script type="text/javascript" src="js/player.js"></script> 
     <script type="text/javascript" src="js/game.js"></script>  
