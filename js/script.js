@@ -22,10 +22,8 @@ window.onload = function (){
         location.reload();
     });
 
-    document.querySelector('#game-screen').addEventListener('mousemove', (e) => {
-        game.player.positionX = e.clientX;
-        console.log(e);
-        console.log(player);
+    document.querySelector('#game-container').addEventListener('mousemove', (e) => {
+        game.player.positionX = e.clientX - 250;
     }, false)
 
 }

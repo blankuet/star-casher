@@ -132,9 +132,7 @@ align-items: center;
     padding: 0;
     overflow: hidden;
     position: relative;
-    border: 2px solid red;
-    background-size: cover;
-    
+    border: 2px solid red;    
 }
 
 #game-end {
