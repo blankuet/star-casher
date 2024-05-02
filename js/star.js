@@ -1,4 +1,4 @@
-class Obstacle {
+class Star {
     constructor(gameScreen) {
       this.gameScreen = gameScreen;
       this.left = Math.floor(Math.random() * 1400);
@@ -7,7 +7,7 @@ class Obstacle {
       this.height = 150;
       this.element = document.createElement("img");
   
-      this.element.src = "./images/satellite.png";
+      this.element.src = "./images/star.png";
       this.element.style.position = "absolute";
       this.element.style.width = `${this.width}px`;
       this.element.style.height = `${this.height}px`;

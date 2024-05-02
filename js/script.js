@@ -1,6 +1,7 @@
 window.onload = function (){
     const startButton = document.getElementById("start-button");
     const musicButton = document.getElementById("music-button");
+    const restartButton = document.getElementById("restart-button");
 
     let game;
 
@@ -12,9 +13,14 @@ window.onload = function (){
     musicButton.addEventListener("click", function() {
         let text = this.innerText;
         this.innerText = text === 'Music on 🎶' ? 'Music off 🔇' : 'Music on 🎶';
+    
+    
     });
+       
 
-    const speed = 10;
+    restartButton.addEventListener("click", function () {
+        location.reload();
+    });
 
     document.querySelector('#game-screen').addEventListener('mousemove', (e) => {
         game.player.positionX = e.clientX;

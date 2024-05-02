@@ -53,5 +53,5 @@ class Player {
     updatePosition() {
         this.element.style.left = `${this.left}px`;
         this.element.style.bottom = `${this.bottom}px`;
-    }
+    }    
 }

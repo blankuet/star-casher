@@ -7,11 +7,14 @@ class Game {
         this.height = 1000;
         this.width = 1600;
         this.obstacles = [];
+        this.stars = [];
         this.score = 0;
         this.lives = 3;
         this.currentTime = 0;
         this.gameIsOver = false;
         this.gameIntervalId;
+        this.counter = 0;
+        this.generationSpeed = 60;
         this.gameLoopFrequency = Math.round(1000/60);
 
         this.player = new Player(this.gameScreen, 0, 0, 200, 300, "./images/raccoon.png");        
@@ -42,6 +45,14 @@ class Game {
     };
 
     update() {
+        this.counter++;
         this.player.move();
+
+        if (this.counter % this.generationSpeed === 0) {
+        this.obstacles.push(new Obstacle(this.gameScreen))
+        }
+        if (this.counter % this.generationSpeed === 0) {
+        this.stars.push(new Star(this.gameScreen))
+        }
     };
 }
