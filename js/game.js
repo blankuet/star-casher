@@ -4,7 +4,7 @@ class Game {
         this.gameScreen = document.querySelector('#game-screen');
         this.gameContainer = document.querySelector('#game-container');
         this.endScreen = document.querySelector('#game-end');
-        this.height = 1000;
+        this.height = 600;
         this.width = 1600;
         this.obstacles = [];
         this.stars = [];
@@ -66,8 +66,7 @@ class Game {
             this.obstacles.splice(index, 1);
             //Reduce player's lives by 1
             this.lives--;
-            const livesCounter = this.gameContainer.querySelector("#lives");
-            livesCounter.innerHTML = this.lives;
+            this.updateLiveCounter();
             if (this.lives === 0) this.gameIsOver = true;
             if (this.gameIsOver) this.gameContainer.style.display = 'inline';
         }
@@ -90,10 +89,11 @@ class Game {
             this.score++;
             const scoreCounter = this.gameContainer.querySelector("#score");
             scoreCounter.innerHTML = this.score;
-            if(this.score % 2 === 0) this.lives++;
+            if(this.score % 5 === 0) this.lives++;
+            this.updateLiveCounter();
         }
         });
-                
+        
         this.player.move();
 
         if (this.counter % this.generationSpeed === 0) {
@@ -104,4 +104,9 @@ class Game {
             this.generationSpeed = 45;
         }
     };
+
+    updateLiveCounter() {
+    const livesCounter = this.gameContainer.querySelector("#lives");
+    livesCounter.innerHTML = this.lives;
+    }
 }

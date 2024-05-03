@@ -2,7 +2,8 @@ window.onload = function (){
     const startButton = document.getElementById("start-button");
     const musicButton = document.getElementById("music-button");
     const restartButton = document.getElementById("restart-button");
-
+    const audio = document.getElementById("audio");
+    let audioIsOn = true;
     let game;
 
     startButton.addEventListener("click", () => {
@@ -11,9 +12,15 @@ window.onload = function (){
     });
 
     musicButton.addEventListener("click", function() {
-        let text = this.innerText;
-        this.innerText = text === 'Music on 🎶' ? 'Music off 🔇' : 'Music on 🎶';
-    
+        audioIsOn = !audioIsOn;
+        console.log(audioIsOn);
+        if (audioIsOn){
+            audio.play();
+            musicButton.innerHTML = 'Music off 🔇';
+        } else {
+            audio.pause();
+            musicButton.innerHTML = 'Music on 🎶'
+        }
     
     });
        
