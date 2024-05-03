@@ -33,9 +33,9 @@ class Player {
         if (this.left < 10) {
         this.left = 10;
         }
-        // handles bottom side
-        if (this.bottom < 10) {
-        this.bottom = 10;
+        // handles bottom side (in negative as player.png takes more space)
+        if (this.bottom < -20) {
+        this.bottom = -20;
         }
         // handles right hand side
         if (this.left > this.gameScreen.offsetWidth - this.width - 10) {

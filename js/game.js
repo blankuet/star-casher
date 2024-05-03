@@ -4,8 +4,8 @@ class Game {
         this.gameScreen = document.querySelector('#game-screen');
         this.gameContainer = document.querySelector('#game-container');
         this.endScreen = document.querySelector('#game-end');
-        this.height = 600;
-        this.width = 1600;
+        this.height = 90;
+        this.width = 100;
         this.obstacles = [];
         this.stars = [];
         this.score = 0;
@@ -17,7 +17,7 @@ class Game {
         this.generationSpeed = 60;
         this.gameLoopFrequency = Math.round(1000/60);
 
-        this.player = new Player(this.gameScreen, 0, 0, 200, 300, "./images/raccoon.png");        
+        this.player = new Player(this.gameScreen, 0, -20, 150, 180, "./images/raccoon.png");        
 
     }
 
@@ -28,8 +28,8 @@ class Game {
         this.gameContainer.style.display = 'flex';
 
         //Setting high and width of GAME SCREEN
-        this.gameScreen.style.height = `${this.height}px`;
-        this.gameScreen.style.width = `${this.width}px`;
+        this.gameScreen.style.height = `${this.height}vh`;
+        this.gameScreen.style.width = `${this.width}%`;
 
         //Program interval
         this.gameIntervalId = setInterval(() => {
