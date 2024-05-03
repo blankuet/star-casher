@@ -71,9 +71,19 @@ class Player {
         }
     }
 
-    /* didCatch (star) {
+    didCatch (star) {
         const playerRect = this.element.getBoundingClientRect();
         const starRect = star.element.getBoundingClientRect();
-
-    } */
+        if (
+            playerRect.left < starRect.right &&
+            playerRect.right > starRect.left &&
+            playerRect.top < starRect.bottom &&
+            playerRect.bottom > starRect.top
+        ) {
+            console.log('star catched')
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

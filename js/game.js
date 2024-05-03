@@ -48,7 +48,7 @@ class Game {
 
     update() {
 
-        /* Adding stars and obstacles + removing them when out of screen */
+        /* Adding obstacles + removing them when out of screen */
         this.counter++;
         this.obstacles.forEach((obstacle, index) => {
         obstacle.move();
@@ -69,16 +69,29 @@ class Game {
             const livesCounter = this.gameContainer.querySelector("#lives");
             livesCounter.innerHTML = this.lives;
             if (this.lives === 0) this.gameIsOver = true;
+            if (this.gameIsOver) this.gameContainer.style.display = 'inline';
         }
         });
-
+        /* Adding stars + removing them when out of screen */
         this.stars.forEach((star, index) => {
             star.move();
-            if (star.top === this.gameScreen.offSetHeight - 10) {
-                this.stars.splice(index, 1);
-                star.element.remove();
-            }
-
+        if (star.top === this.gameScreen.offSetHeight - 10) {
+            this.stars.splice(index, 1);
+            star.element.remove();
+        }
+        /* Detect if collides with star, if true, remove element and add 1 point to */
+        if (this.player.didCatch(star)) {
+            console.log('star')
+            //Remove star from DOM
+            star.element.remove();
+            //Remove star obj from array
+            this.stars.splice(index, 1);
+            //Add 1 point to score
+            this.score++;
+            const scoreCounter = this.gameContainer.querySelector("#score");
+            scoreCounter.innerHTML = this.score;
+            if(this.score % 2 === 0) this.lives++;
+        }
         });
                 
         this.player.move();
