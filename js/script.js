@@ -30,7 +30,7 @@ window.onload = function (){
     });
 
     document.querySelector('#game-screen').addEventListener('mousemove', (e) => {
-        game.player.positionX = e.clientX - 250;
+        game.player.positionX = e.clientX - 150;
     }, false)
 
 }
