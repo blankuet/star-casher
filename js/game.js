@@ -27,7 +27,7 @@ class Game {
         this.gameScreen.style.display = 'block';
         this.gameContainer.style.display = 'flex';
 
-        //Setting high and width of GAME SCREEN
+        //Setting height and width of GAME SCREEN
         this.gameScreen.style.height = `${this.height}vh`;
         this.gameScreen.style.width = `${this.width}%`;
 
@@ -71,6 +71,7 @@ class Game {
             if (this.gameIsOver) this.gameContainer.style.display = 'inline';
         }
         });
+        
         /* Adding stars + removing them when out of screen */
         this.stars.forEach((star, index) => {
             star.move();
