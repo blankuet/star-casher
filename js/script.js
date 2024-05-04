@@ -16,10 +16,10 @@ window.onload = function (){
         console.log(audioIsOn);
         if (audioIsOn){
             audio.play();
-            musicButton.innerHTML = 'Music off 🔇';
+            musicButton.innerHTML = 'Music on 🎶';
         } else {
             audio.pause();
-            musicButton.innerHTML = 'Music on 🎶'
+            musicButton.innerHTML = 'Music off 🔇'
         }
     
     });
