@@ -14,7 +14,7 @@ window.onload = function (){
     musicButton.addEventListener("click", function() {
         audioIsOn = !audioIsOn;
         console.log(audioIsOn);
-        if (audioIsOn){
+        if (!audioIsOn){
             audio.play();
             musicButton.innerHTML = 'Music on 🎶';
         } else {
