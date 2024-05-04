@@ -1,6 +1,8 @@
 # star-chaser
 Browser-based game using HTML, CSS, JavaScript, DOM manipulation, and Object-Oriented Programming (OOP) for first project in Web Development bootcamp on Ironhack.
 
+Demo: https://star-chaser-blankuet.netlify.app/
+
 Credits:   
 
 ✦ Background image by [@ko_dll] (https://twitter.com/ko_dll/status/1745803279676657882)   
