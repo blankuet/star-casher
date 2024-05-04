@@ -47,12 +47,13 @@ class Game {
     };
 
     update() {
-
+        console.log(this.obstacles)
         /* Adding obstacles + removing them when out of screen */
         this.counter++;
         this.obstacles.forEach((obstacle, index) => {
         obstacle.move();
-        if (obstacle.top === this.gameScreen.offSetHeight - 10) {
+        if (obstacle.top >= this.gameScreen.offsetHeight - 10) {
+            console.log('obstacle out')
             this.obstacles.splice(index, 1);
             obstacle.element.remove();
         }
@@ -75,7 +76,7 @@ class Game {
         /* Adding stars + removing them when out of screen */
         this.stars.forEach((star, index) => {
             star.move();
-        if (star.top === this.gameScreen.offSetHeight - 10) {
+        if (star.top === this.gameScreen.offsetHeight - 10) {
             this.stars.splice(index, 1);
             star.element.remove();
         }
