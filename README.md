@@ -1,4 +1,4 @@
-# star-chaser
+![alt text](https://fontmeme.com/permalink/240425/c75710ab35cd0c90fce4afde11cdfc62.png)
 Browser-based game using HTML, CSS, JavaScript, DOM manipulation, and Object-Oriented Programming (OOP).
 
 Demo: https://star-chaser-blankuet.netlify.app/
